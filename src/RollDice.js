@@ -21,9 +21,9 @@ class RollDice extends Component {
 
   handleClick() {
     this.setState({ isSpinning: true });
-
     this.setState({ diceState: "" });
     this.setState({ titleState: "サイコロをしています！" });
+    
     setTimeout(() => {
       this.setState({ isSpinning: false });
       this.setState({ diceState: "Roll" });
@@ -36,25 +36,18 @@ class RollDice extends Component {
     let rand = Math.floor(Math.random() * 6) + 1;
     let rand2 = Math.floor(Math.random() * 6) + 1;
 
-    this.setState({num: rand + rand2});
+    this.setState({ num: rand + rand2 });
     this.setState({ dice1: Die.getDice(rand) });
     this.setState({ dice2: Die.getDice(rand2) });
   }
 
   render() {
     return (
-      
       <div className="center-cointainer">
-     
-     
-     <h1>{this.state.titleState}</h1>
-     
+        <h1>{this.state.titleState}</h1>
+
         <div className="flex-container">
-          
-        
-        
           <div className="contain-two-dice">
-            
             <div className="dice-container">
               <FontAwesomeIcon
                 icon={this.state.dice1}
@@ -73,22 +66,21 @@ class RollDice extends Component {
                   this.state.isSpinning ? "spin" : ""
                 }`}
               />
-            
             </div>
 
-                <div className="info">
-            <button onClick={this.handleClick} className="button" disabled={this.state.isSpinning}>
-              {this.state.diceState}
-            </button>
-            <h1>{this.state.num}</h1>
-
+            <div className="info">
+              <button
+                onClick={this.handleClick}
+                className="button"
+                disabled={this.state.isSpinning}
+              >
+                {this.state.diceState}
+              </button>
+              <h1>{this.state.num}</h1>
             </div>
           </div>
-          <div>
-          
-          </div>
+          <div></div>
         </div>
-        
       </div>
     );
   }

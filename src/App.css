@@ -31,6 +31,7 @@
     margin-top: 20px;
     flex-direction: column;
     
+    
 }
 
 button {
@@ -45,6 +46,7 @@ button {
     transition: all 0.2s ease-in-out 0ms;
     user-select: none;
     font-family: 'Poppins', sans-serif;
+
   }
   
   button:hover {
@@ -88,4 +90,13 @@ h1{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.roach-pic{
+    width: 100px;
+}
+
+.header-gap{
+    gap: 2%;
+    display: flex;
 }

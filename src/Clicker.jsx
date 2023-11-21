@@ -26,9 +26,10 @@ class Clicker extends Component {
         <div className="flex-container">
           <h1>Clicker!</h1>
           <h1>{this.state.num}</h1>
-          <button onClick={this.handleClick}>Click Me</button>
+          <button onClick={this.handleClick}>Click!</button>
         </div>
-        {this.state.showRoach && <img src="https://media.tenor.com/9u7zZ82akxcAAAAi/cockroachdance-cockroach.gif"></img>}
+        {this.state.showRoach && <img src="https://media.tenor.com/9u7zZ82akxcAAAAi/cockroachdance-cockroach.gif" className="roach-pic" alt="roach"></img>}
+        
       </div>
     );
   }
